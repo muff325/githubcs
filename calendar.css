@@ -1,0 +1,204 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calendar-container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  left: 200px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.calendar-header button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-header button:hover {
+  background-color: #0056b3;
+}
+
+.calendar-days,
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.calendar-days div {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.calendar-body div {
+  padding: 15px 0;
+  border-radius: 8px;
+}
+
+.calendar-day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  min-height: 60px;
+  background-color: #fff;
+}
+
+.calendar-day.low {
+  background-color: #c8e6c9;
+}
+
+.calendar-day.medium {
+  background-color: #fff9c4;
+}
+
+.calendar-day.high {
+  background-color: #ffcdd2;
+}
+
+.calendar-day:hover {
+  background-color: #e0f7fa;
+}
+
+.todo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.todo-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.todo-content textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.todo-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.house {
+  position: relative;
+  right: 170px;
+  bottom: -350px;
+  background-color: #337ab7;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border: 1px solid #2e6da4;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn {
+  background-color: #d9534f;
+  color: #d9534f;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  top: 300px;
+  right: 65px;
+}
+
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.legend-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+.legend-box h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.legend-box div {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.legend {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.legend.low {
+  background-color: #a5d6a7; 
+}
+
+.legend.medium {
+  background-color: #fff59d; 
+}
+
+.legend.high {
+  background-color: #ef9a9a; 
+}

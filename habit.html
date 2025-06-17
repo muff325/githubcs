@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="habit.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Habit Tracker</h1>
+    <label>Habit Name: <input type="text" id="habit-name"></label><br>
+    <label>Estimated Time (min): <input type="number" id="estimated-time"></label><br>
+
+    <div class="days">
+      <label><input type="checkbox" class="day-checkbox" value="Mon">Mon</label>
+      <label><input type="checkbox" class="day-checkbox" value="Tue">Tue</label>
+      <label><input type="checkbox" class="day-checkbox" value="Wed">Wed</label>
+      <label><input type="checkbox" class="day-checkbox" value="Thu">Thu</label>
+      <label><input type="checkbox" class="day-checkbox" value="Fri">Fri</label>
+      <label><input type="checkbox" class="day-checkbox" value="Sat">Sat</label>
+      <label><input type="checkbox" class="day-checkbox" value="Sun">Sun</label>
+    </div>
+
+    <button onclick="addHabit()">Add Habit</button>
+
+    <ul id="habit-list"></ul>
+
+    <h2>Progress Chart</h2>
+    <canvas id="habitChart" width="600" height="300"></canvas>
+  </div>
+
+  <div class = "house">
+    <a href = "index.html"><button>Back to Home</button></a>
+  </div>
+
+   <button class="clear-btn" onclick="clearAll()">Clear All</button>
+</div>
+
+  <script src="habit.js"></script>
+</body>
+</html>
+
