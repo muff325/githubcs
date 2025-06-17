@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood & Energy Tracker</title>
+  <link rel="stylesheet" href="mood-energy.css"/>
+</head>
+<body>
+  <div class="tracker-container">
+    <h1>Mood & Energy Tracker 🧭</h1>
+    <div class="day-input">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" />
+
+      <label for="mood">Mood:</label>
+      <select id="mood">
+        <option value="😊">😊 Happy</option>
+        <option value="😐">😐 Neutral</option>
+        <option value="😞">😞 Sad</option>
+      </select>
+
+      <label for="energy">Energy:</label>
+      <select id="energy">
+        <option value="⚡">⚡ High</option>
+        <option value="🙂">🙂 Medium</option>
+        <option value="😴">😴 Low</option>
+      </select>
+
+      <button onclick="saveEntry()">Save</button>
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid"></div>
+
+    <div class="insight" id="insightBox">Insights will appear here!</div>
+  </div>
+
+  <a href="index.html" class="house">Back to Home</a>
+
+  <button id="clear-btn">🗑️ Clear all</button>
+
+  <script src="mood-energy.js"></script>
+</body>
+</html>
